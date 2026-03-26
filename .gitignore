@@ -10,3 +10,6 @@ Thumbs.db
 
 # Cursor (optional local)
 .cursor/
+
+# Vercel CLI
+.vercel/

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design — Craigmillar Studio</title>
+  <meta name="description" content="Custom built websites for Ontario trades and home service businesses. Built for plumbers, roofers, HVAC, movers, and the trades that keep Ontario running." />
+  <link rel="canonical" href="https://craigmillarstudio.ca/web-design.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://craigmillarstudio.ca/web-design.html" />
+  <meta property="og:title" content="Web Design — Craigmillar Studio" />
+  <meta property="og:description" content="Custom built websites for Ontario trades and home service businesses." />
+  <meta property="og:image" content="https://craigmillarstudio.ca/assets/images/hero-bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Web Design — Craigmillar Studio" />
+  <meta name="twitter:image" content="https://craigmillarstudio.ca/assets/images/hero-bg.jpg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"Web Design","url":"https://craigmillarstudio.ca/web-design.html","isPartOf":{"@id":"https://craigmillarstudio.ca/#website"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── WEB DESIGN PAGE STYLES ── */
+
+    /* Tiers */
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; align-items: start; }
+    .tier { background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; padding: 36px 32px; position: relative; transition: border-color 0.3s, transform 0.3s, background 0.3s; }
+    .tier:hover { border-color: var(--line2); transform: translateY(-4px); background: var(--bg3); }
+    .tier--featured { border-color: var(--acc); }
+    .tier--featured:hover { border-color: var(--acc); }
+    .tier__badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--acc); color: var(--adk); font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 16px; border-radius: 100px; white-space: nowrap; }
+    .tier__name { font-family: var(--fd); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t2); margin-bottom: 10px; }
+    .tier__price { font-family: var(--fd); font-size: clamp(34px, 4vw, 48px); font-weight: 800; letter-spacing: -2px; color: var(--t0); line-height: 1; margin-bottom: 6px; }
+    .tier__price span { font-size: 16px; font-weight: 500; letter-spacing: 0; color: var(--t1); }
+    .tier__desc { font-size: 13px; color: var(--t1); line-height: 1.6; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .tier__for { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t2); margin-bottom: 8px; }
+    .tier__ideal { font-size: 13px; color: var(--t1); line-height: 1.6; margin-bottom: 20px; }
+    .tier__timeline { display: inline-flex; align-items: center; gap: 6px; background: var(--adim); border: 1px solid var(--aring); border-radius: 6px; padding: 5px 12px; font-size: 11px; font-weight: 600; color: var(--acc); margin-bottom: 24px; }
+    .feat-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .feat { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--t1); line-height: 1.5; }
+    .feat__check { width: 15px; height: 15px; flex-shrink: 0; margin-top: 1px; color: var(--acc); }
+    .btn-tier { display: block; width: 100%; padding: 13px; border-radius: 8px; font-size: 14px; font-weight: 700; font-family: var(--fb); text-align: center; transition: box-shadow 0.25s, transform 0.15s, background 0.2s, border-color 0.2s; cursor: pointer; }
+    .btn-tier--solid { background: var(--acc); color: var(--adk); border: 1px solid transparent; }
+    .btn-tier--solid:hover { box-shadow: 0 0 28px var(--aglow); transform: translateY(-1px); }
+    .btn-tier--outline { background: transparent; color: var(--t0); border: 1px solid var(--line2); }
+    .btn-tier--outline:hover { border-color: var(--t1); background: var(--bg4); }
+
+    /* Stack callout */
+    .stack-box { background: var(--bg2); border: 1px solid var(--line); border-left: 3px solid var(--acc); border-radius: 12px; padding: 28px 32px; margin-top: 36px; display: flex; align-items: flex-start; gap: 20px; }
+    .stack-box__icon { flex-shrink: 0; width: 40px; height: 40px; background: var(--adim); border: 1px solid var(--aring); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .stack-box__title { font-family: var(--fd); font-size: 15px; font-weight: 700; color: var(--t0); margin-bottom: 6px; }
+    .stack-box__body { font-size: 13.5px; color: var(--t1); line-height: 1.7; }
+
+    /* Add-ons */
+    .addons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; }
+    .addon { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 24px 22px; transition: border-color 0.25s, transform 0.2s; }
+    .addon:hover { border-color: var(--line2); transform: translateY(-2px); }
+    .addon__name { font-size: 14px; font-weight: 600; color: var(--t0); margin-bottom: 6px; }
+    .addon__desc { font-size: 12px; color: var(--t1); line-height: 1.6; }
+
+    /* Comparison table */
+    .comp-wrap { overflow-x: auto; margin-top: 52px; border-radius: 14px; border: 1px solid var(--line); }
+    .comp-table { width: 100%; border-collapse: collapse; min-width: 580px; }
+    .comp-table th { padding: 16px 18px; font-family: var(--fd); font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t2); background: var(--bg2); text-align: left; border-bottom: 1px solid var(--line); }
+    .comp-table th:not(:first-child) { text-align: center; }
+    .comp-table th.fc { color: var(--acc); }
+    .comp-table td { padding: 13px 18px; font-size: 13px; color: var(--t1); border-bottom: 1px solid var(--line); background: var(--bg2); }
+    .comp-table td:not(:first-child) { text-align: center; }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table tr:hover td { background: var(--bg3); }
+    .comp-table td.fc { color: var(--t0); }
+    .comp-table .row-lbl { font-weight: 500; color: var(--t0); }
+    .ck { color: var(--acc); font-weight: 700; }
+    .cx { color: var(--t2); }
+
+    /* 4-step process */
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 52px; position: relative; }
+    .process-steps::before { content: ''; position: absolute; top: 23px; left: calc(12.5% + 12px); right: calc(12.5% + 12px); height: 1px; background: linear-gradient(90deg, var(--line), var(--acc), var(--acc), var(--line)); }
+    .ps { text-align: center; }
+    .ps__num { width: 48px; height: 48px; border-radius: 50%; background: var(--bg2); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; position: relative; z-index: 1; transition: border-color 0.25s, background 0.25s; }
+    .ps:hover .ps__num { border-color: var(--acc); background: var(--bg3); }
+    .ps__num span { font-family: var(--fd); font-size: 15px; font-weight: 800; color: var(--acc); }
+    .ps__title { font-family: var(--fd); font-size: 15px; font-weight: 700; color: var(--t0); margin-bottom: 8px; }
+    .ps__body { font-size: 12.5px; color: var(--t1); line-height: 1.65; }
+
+    @media (max-width: 1024px) {
+      .tiers { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+      .tier--featured { order: -1; }
+      .addons { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-steps::before { display: none; }
+      .stack-box { flex-direction: column; gap: 14px; }
+    }
+    @media (max-width: 768px) {
+      .addons, .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="nav__logo-img" width="200" height="44" /></a>
+    <ul class="nav__links">
+      <li><a href="web-design.html" class="active">Web Design</a></li>
+      <li><a href="ai-automation.html">AI Automation</a></li>
+      <li><a href="our-work.html">Our Work</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer" class="nav__cta">Book a Call →</a>
+    <button class="nav__ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile" id="mob">
+    <a href="index.html">Home</a>
+    <a href="web-design.html">Web Design</a>
+    <a href="ai-automation.html">AI Automation</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer">Book a Free Call →</a>
+  </div>
+
+  <main id="main">
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="breadcrumb rv"><a href="index.html">Home</a><span class="breadcrumb__sep">/</span><span class="breadcrumb__cur">Web Design</span></div>
+      <span class="page-eyebrow rv">Web Design — Ontario</span>
+      <h1 class="page-h1 rv d1">Custom sites that<br><em>rank, load fast,</em><br>and convert.</h1>
+      <p class="page-lead rv d2" style="margin-bottom:40px;">Custom built — not Wix, not Squarespace, not a template. Every site we build is fast, mobile-first, and built to rank on Google from the day it goes live.</p>
+      <div class="pills rv d3">
+        <div class="pill"><div class="pill__dot"></div>Custom Built</div>
+        <div class="pill"><div class="pill__dot"></div>Google PageSpeed 90+</div>
+        <div class="pill"><div class="pill__dot"></div>Mobile-First</div>
+        <div class="pill"><div class="pill__dot"></div>Live in 10 Days</div>
+        <div class="pill"><div class="pill__dot"></div>No CMS Bloat</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-bar__inner">
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">No Wix. No Squarespace. No templates.</span></div>
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">Google PageSpeed 90+ guaranteed</span></div>
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">Live in 10 business days</span></div>
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">No templates. No page builders.</span></div>
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">Ontario-based. Canada's privacy laws.</span></div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="sec" id="how-it-works">
+    <div class="wrap">
+      <span class="eyebrow rv">How It Works</span>
+      <h2 class="sh rv d1" style="max-width:520px;">Every project starts with a call.</h2>
+      <p class="sp rv d2">We scope every build on a free discovery call. We look at what you have, tell you what you need, and give you a clear timeline and cost before you commit to anything. No guesswork. No surprises.</p>
+      <div class="steps">
+        <div class="step rv d1"><div class="step__num"><span>01</span></div><h3 class="step__title">Discovery Call</h3><p class="step__body">30 minutes. We look at your current online presence, learn your business, and scope exactly what we'd build.</p></div>
+        <div class="step rv d2"><div class="step__num"><span>02</span></div><h3 class="step__title">We Quote You</h3><p class="step__body">You get a clear cost and timeline before committing. No vague estimates. No post-agreement surprises.</p></div>
+        <div class="step rv d3"><div class="step__num"><span>03</span></div><h3 class="step__title">We Build It</h3><p class="step__body">Full build delivered. You review, request changes, and approve before anything goes live.</p></div>
+      </div>
+      <div style="margin-top:44px;text-align:center;">
+        <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-solid btn-solid--lg rv">Book a Discovery Call →</a>
+        <p style="margin-top:14px;font-size:11px;color:var(--t2);letter-spacing:2px;text-transform:uppercase;">No pitch deck &nbsp;·&nbsp; No pressure &nbsp;·&nbsp; No obligation</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- ADD-ONS -->
+  <section class="sec sec-alt" id="addons">
+    <div class="wrap">
+      <span class="eyebrow rv">Add-Ons</span>
+      <h2 class="sh rv d1">Bolt on what you need.</h2>
+      <p class="sp rv d2">Standalone services that can be added to any tier or booked independently.</p>
+      <div class="addons">
+        <div class="addon rv d1"><div class="addon__name">Google Business Profile Optimization</div><p class="addon__desc">Full GBP audit and optimization — categories, service areas, photos, description, Q&amp;A, and review response setup. Ask us about this on your discovery call.</p></div>
+        <div class="addon rv d2"><div class="addon__name">Speed &amp; SEO Audit</div><p class="addon__desc">Full audit of your existing site — PageSpeed score, Core Web Vitals, on-page SEO gaps, and a prioritized fix list. Ask us about this on your discovery call.</p></div>
+        <div class="addon rv d3"><div class="addon__name">Monthly Maintenance &amp; Updates</div><p class="addon__desc">Content updates, performance monitoring, security patches, and one round of design changes per month. Ask us about this on your discovery call.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="sec" id="compare">
+    <div class="wrap">
+      <span class="eyebrow rv">Compare</span>
+      <h2 class="sh rv d1">What's included in each tier.</h2>
+      <div class="comp-wrap rv d1">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th style="width:40%">Feature</th>
+              <th>Starter</th>
+              <th class="fc">Growth</th>
+              <th>Custom</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-lbl">Custom built, performance-optimized</td><td><span class="ck">✓</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Mobile-first design</td><td><span class="ck">✓</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Number of pages</td><td>5 pages</td><td class="fc">10+ pages</td><td>Scoped</td></tr>
+            <tr><td class="row-lbl">Google Business Profile setup</td><td><span class="ck">✓</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Contact form + email notification</td><td><span class="ck">✓</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Basic on-page SEO</td><td><span class="ck">✓</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Ontario location pages</td><td><span class="cx">—</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Full technical SEO</td><td><span class="cx">—</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Schema markup</td><td><span class="cx">—</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Google Analytics 4 + Search Console</td><td><span class="cx">—</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Blog setup + 2 posts written</td><td><span class="cx">—</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Google PageSpeed 90+ target</td><td><span class="cx">—</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Booking systems / patient intake</td><td><span class="cx">—</span></td><td class="fc"><span class="cx">—</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">eCommerce / WooCommerce</td><td><span class="cx">—</span></td><td class="fc"><span class="cx">—</span></td><td><span class="ck">✓</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- AI UPSELL -->
+  <section class="sec sec-alt" id="ai-upsell">
+    <div class="wrap">
+      <div style="background:var(--bg2);border:1px solid var(--aring);border-left:3px solid var(--acc);border-radius:14px;padding:36px 40px;display:flex;align-items:flex-start;gap:24px;">
+        <div style="width:48px;height:48px;background:var(--adim);border:1px solid var(--aring);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.21 3.41 2 2 0 0 1 3.22 1.22h3a2 2 0 0 1 2 1.72c.09.88.26 1.76.5 2.62a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.36-1.36a2 2 0 0 1 2.11-.45c.86.24 1.74.41 2.62.5A2 2 0 0 1 22 15.91z"/></svg>
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--acc);margin-bottom:8px;">Add-On Available</div>
+          <div style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--t0);letter-spacing:-0.5px;margin-bottom:10px;">Your site is live. Now make it answer the phone.</div>
+          <p style="font-size:14px;color:var(--t1);line-height:1.75;max-width:640px;margin-bottom:18px;">Once your site is live, ask us about adding a 24/7 AI receptionist that answers calls, qualifies leads, and books appointments automatically. No extra contracts — it runs on the same system we use for every client.</p>
+          <a href="ai-automation.html" style="display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--acc);">See AI Automation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sec sec-alt" id="process">
+    <div class="wrap">
+      <span class="eyebrow rv">How It Works</span>
+      <h2 class="sh rv d1">From call to live site in 10 days.</h2>
+      <div class="process-steps">
+        <div class="ps rv d1"><div class="ps__num"><span>01</span></div><h3 class="ps__title">Discovery Call</h3><p class="ps__body">30 minutes. We learn your business, review your current online presence, and confirm which tier makes sense.</p></div>
+        <div class="ps rv d2"><div class="ps__num"><span>02</span></div><h3 class="ps__title">You Send Content</h3><p class="ps__body">Logo, photos, any copy you have. We write what's missing and handle the structure — you just approve.</p></div>
+        <div class="ps rv d3"><div class="ps__num"><span>03</span></div><h3 class="ps__title">We Build + Review</h3><p class="ps__body">Full build delivered. You get a preview link, request any changes, and we refine before anything goes live.</p></div>
+        <div class="ps rv d4"><div class="ps__num"><span>04</span></div><h3 class="ps__title">Live + Handed Over</h3><p class="ps__body">Domain connected, hosting configured, fully tested. You get complete access to everything we built.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <span class="eyebrow rv">FAQ</span>
+      <h2 class="sh rv d1" style="max-width:480px;margin-bottom:0;">Questions we get asked every time.</h2>
+      <div class="faq-list rv d1">
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Why don't you build in Wix or Squarespace?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Wix and Squarespace sites load slowly, rank poorly on Google, and are difficult to migrate off. A hand-coded site we build will consistently outperform a drag-and-drop site on every metric that matters — speed, SEO, and conversion. We build on our stack because we stand behind the results, and we can't stand behind a Wix build.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">What do I need to provide to get started?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Your logo if you have one, any photos of your work, and a basic overview of your services and service areas. We write copy, handle structure, and source placeholder imagery if needed. The more you give us, the better the result.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Do I own the site when it's done?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Yes. Completely. You get the full codebase, the domain, and the hosting account in your name. There are no lock-in contracts, no proprietary platforms, and no dependencies on us to keep your site running.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">What does "Google PageSpeed 90+" actually mean?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Google measures site performance on a 0–100 scale. The average business website scores 30–50. Scoring 90+ means your site loads fast enough that Google considers it a strong result — which directly improves your search ranking. Our custom builds hit it by default.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Can I add AI automation later?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Yes. Most clients start with a website and add AI automation once they see the site performing. The missed call text-back and Google review automation can be added to any existing site — they don't require a rebuild.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Do you work outside the Ontario?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">We're Ontario-focused but take on select projects across Ontario and Canada. Book a call — if it's a good fit we'll tell you, and if it's not we'll tell you that too.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-sec" id="cta">
+    <div class="wrap" style="position:relative;z-index:1;">
+      <h2 class="cta-sec__h rv">Your competitors have<br>a better site. <span  style="color:var(--acc)">We fix that.</span></h2>
+      <p class="cta-sec__p rv d1">Book a free 30-minute call. We'll look at what you currently have online and tell you exactly what we'd build to change it.</p>
+      <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-solid btn-solid--lg rv d2">Book a Free Call →</a>
+      <p class="cta-sec__fine rv d3">No pitch deck &nbsp;·&nbsp; No pressure &nbsp;·&nbsp; No obligation</p>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" style="display:inline-flex;margin-bottom:14px;"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="footer__logo-img" width="180" height="40" /></a>
+        <p class="footer__tagline">Custom built websites and AI automation for Ontario trades and service businesses. More calls. More jobs. Guaranteed.</p>
+      </div>
+      <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="web-design.html">Web Design</a></li><li><a href="ai-automation.html">AI Automation</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener">Book a Call</a></li><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Craigmillar Studio. Built in Toronto, Canada.</p>
+      <span class="footer__badge">Serving Ontario</span>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

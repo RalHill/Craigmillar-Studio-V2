@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Craigmillar Studio</title>
+  <meta name="description" content="Practical guides for Ontario trades and service businesses on web design, local SEO, AI automation, and getting more calls." />
+  <link rel="canonical" href="https://craigmillarstudio.ca/blog.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://craigmillarstudio.ca/blog.html" />
+  <meta property="og:title" content="Blog — Craigmillar Studio" />
+  <meta property="og:description" content="Practical guides for Ontario trades and service businesses on web design, local SEO, and AI automation." />
+  <meta property="og:image" content="https://craigmillarstudio.ca/assets/images/hero-bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://craigmillarstudio.ca/assets/images/hero-bg.jpg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Blog","name":"Craigmillar Studio Blog","url":"https://craigmillarstudio.ca/blog.html","publisher":{"@id":"https://craigmillarstudio.ca/#org"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── BLOG PAGE STYLES ── */
+
+    .topics { display: flex; flex-wrap: wrap; gap: 8px; margin: 32px 0 52px; }
+    .topic-pill { padding: 7px 18px; border-radius: 100px; font-size: 12px; font-weight: 600; cursor: pointer; border: 1px solid var(--line2); background: transparent; color: var(--t1); font-family: var(--fb); transition: border-color 0.2s, color 0.2s; }
+    .topic-pill:hover, .topic-pill.active { border-color: var(--acc); color: var(--acc); }
+
+    .blog-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .blog-card { background: var(--bg2); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; }
+    .blog-card:hover { border-color: var(--acc); transform: translateY(-3px); }
+    .blog-card--featured { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr; align-items: stretch; }
+
+    .blog-thumb { height: 200px; overflow: hidden; background: var(--bg3); position: relative; }
+    .blog-thumb--featured { height: 100%; min-height: 260px; }
+    .blog-thumb__inner { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+    .blog-thumb__icon { width: 52px; height: 52px; background: var(--adim); border: 1px solid var(--aring); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+    .blog-thumb__num { font-family: var(--fd); font-size: clamp(34px, 4vw, 50px); font-weight: 800; color: var(--acc); letter-spacing: -2px; text-align: center; }
+    .blog-thumb__label { font-size: 11px; color: var(--t1); letter-spacing: 1px; text-transform: uppercase; margin-top: 4px; text-align: center; }
+    .blog-thumb--a { background: linear-gradient(135deg, #0B0F1A, #0f1c30); }
+    .blog-thumb--b { background: linear-gradient(135deg, #0d1a0d, #0a1f1a); }
+    .blog-thumb--c { background: linear-gradient(135deg, #1a0f0a, #2a1a08); }
+
+    .blog-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+    .blog-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+    .blog-cat { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 9px; border-radius: 100px; background: var(--adim); color: var(--acc); border: 1px solid var(--aring); }
+    .blog-date, .blog-read { font-size: 11px; color: var(--t2); }
+    .blog-sep { font-size: 11px; color: var(--t2); }
+    .blog-title { font-family: var(--fd); font-size: clamp(18px, 2vw, 23px); font-weight: 800; color: var(--t0); letter-spacing: -0.5px; line-height: 1.15; margin-bottom: 12px; }
+    .blog-excerpt { font-size: 13.5px; color: var(--t1); line-height: 1.7; margin-bottom: 20px; flex: 1; }
+    .blog-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: var(--acc); transition: gap 0.25s; margin-top: auto; }
+    .blog-link:hover { gap: 10px; }
+    .blog-link--disabled { opacity: 0.45; pointer-events: none; }
+
+    /* Coming soon */
+    .blog-soon { background: var(--bg2); border: 1px dashed var(--line2); border-radius: var(--radius-lg); padding: 36px 28px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 200px; transition: border-color 0.25s; }
+    .blog-soon:hover { border-color: var(--acc); }
+    .blog-soon__label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t2); margin-bottom: 12px; }
+    .blog-soon__title { font-family: var(--fd); font-size: 17px; font-weight: 700; color: var(--t1); letter-spacing: -0.3px; line-height: 1.3; }
+
+    /* Newsletter */
+    .newsletter { background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; padding: 40px; margin-top: 64px; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+    .newsletter__title { font-family: var(--fd); font-size: 22px; font-weight: 800; color: var(--t0); letter-spacing: -0.5px; margin-bottom: 8px; }
+    .newsletter__body { font-size: 14px; color: var(--t1); line-height: 1.65; }
+    .nl-form { display: flex; gap: 10px; }
+    .nl-input { background: var(--bg3); border: 1px solid var(--line2); border-radius: 7px; padding: 13px 18px; font-size: 14px; color: var(--t0); font-family: var(--fb); width: 260px; transition: border-color 0.2s; outline: none; }
+    .nl-input::placeholder { color: var(--t2); }
+    .nl-input:focus { border-color: var(--acc); }
+    .nl-btn { background: var(--acc); color: var(--adk); padding: 13px 22px; border-radius: 7px; font-size: 14px; font-weight: 700; font-family: var(--fb); border: none; cursor: pointer; white-space: nowrap; transition: box-shadow 0.25s, transform 0.15s; }
+    .nl-btn:hover { box-shadow: 0 0 22px var(--aglow); transform: translateY(-1px); }
+
+    @media (max-width: 1024px) {
+      .blog-card--featured { grid-template-columns: 1fr; }
+      .blog-thumb--featured { min-height: 200px; }
+      .newsletter { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-card--featured { grid-column: auto; }
+      .nl-form { flex-direction: column; }
+      .nl-input { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="nav__logo-img" width="200" height="44" /></a>
+    <ul class="nav__links">
+      <li><a href="web-design.html">Web Design</a></li>
+      <li><a href="ai-automation.html">AI Automation</a></li>
+      <li><a href="our-work.html">Our Work</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+    <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer" class="nav__cta">Book a Call →</a>
+    <button class="nav__ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile" id="mob">
+    <a href="index.html">Home</a>
+    <a href="web-design.html">Web Design</a>
+    <a href="ai-automation.html">AI Automation</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer">Book a Free Call →</a>
+  </div>
+
+  <main id="main">
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="breadcrumb rv"><a href="index.html">Home</a><span class="breadcrumb__sep">/</span><span class="breadcrumb__cur">Blog</span></div>
+      <span class="page-eyebrow rv">Blog — Craigmillar Studio</span>
+      <h1 class="page-h1 rv d1">Practical guides for<br><em>Ontario businesses.</em></h1>
+      <p class="page-lead rv d2">No agency fluff. Real answers to the questions Ontario trades and service businesses actually ask — about websites, local SEO, AI automation, and getting more calls.</p>
+    </div>
+  </div>
+
+  <section class="sec" id="posts">
+    <div class="wrap">
+      <span class="eyebrow rv">Latest Posts</span>
+      <h2 class="sh rv d1">Guides that actually help.</h2>
+
+      <div class="topics rv d2">
+        <button class="topic-pill active">All</button>
+        <button class="topic-pill">Web Design</button>
+        <button class="topic-pill">Local SEO</button>
+        <button class="topic-pill">AI Automation</button>
+        <button class="topic-pill">Lead Generation</button>
+        <button class="topic-pill">Google Reviews</button>
+      </div>
+
+      <div class="blog-grid">
+
+        <!-- POST 1 — FEATURED -->
+        <article class="blog-card blog-card--featured rv d1">
+          <div class="blog-thumb blog-thumb--featured blog-thumb--a">
+            <div class="blog-thumb__inner" style="flex-direction:column;">
+              <div class="blog-thumb__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+              <div class="blog-thumb__num">90+</div>
+              <div class="blog-thumb__label">PageSpeed Score</div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="blog-cat">Local SEO</span>
+              <span class="blog-sep">·</span>
+              <span class="blog-date">March 2026</span>
+              <span class="blog-sep">·</span>
+              <span class="blog-read">8 min read</span>
+            </div>
+            <h2 class="blog-title">Why Your Ontario Trades Business Isn't Showing Up on Google — And How to Fix It in 30 Days</h2>
+            <p class="blog-excerpt">Most trades businesses in Ontario are invisible on Google — not because they're doing anything wrong, but because they're not doing the three things that actually move the needle: mobile-first site speed, Google Business Profile optimisation, and location page architecture. This guide walks through exactly what to fix and in what order, with real numbers from Ontario service businesses we've worked with.</p>
+            <a href="blog/ontario-google-visibility-30-days.html" class="blog-link">Read the full guide <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <!-- POST 2 -->
+        <article class="blog-card rv d2">
+          <div class="blog-thumb blog-thumb--b">
+            <div class="blog-thumb__inner" style="flex-direction:column;">
+              <div class="blog-thumb__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.21 3.41 2 2 0 0 1 3.22 1.22h3a2 2 0 0 1 2 1.72c.09.88.26 1.76.5 2.62a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.36-1.36a2 2 0 0 1 2.11-.45c.86.24 1.74.41 2.62.5A2 2 0 0 1 22 15.91z"/></svg></div>
+              <div class="blog-thumb__num">60s</div>
+              <div class="blog-thumb__label">Text-back speed</div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-cat">AI Automation</span><span class="blog-sep">·</span><span class="blog-date">March 2026</span><span class="blog-sep">·</span><span class="blog-read">5 min read</span></div>
+            <h2 class="blog-title">What AI Automation Can Actually Do for a Plumber, Contractor, or Moving Company</h2>
+            <p class="blog-excerpt">Not "AI transformation." Not strategy decks. A straight answer to what automation does in plain English for a service business — missed call recovery, review requests, quote follow-up — and what it costs vs. what it returns in the first 90 days.</p>
+            <a href="blog/ai-automation-trades-plumbers-contractors.html" class="blog-link">Read the full guide <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <!-- POST 3 -->
+        <article class="blog-card rv d3">
+          <div class="blog-thumb blog-thumb--c">
+            <div class="blog-thumb__inner" style="flex-direction:column;">
+              <div class="blog-thumb__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="1.5" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <div class="blog-thumb__num">3×</div>
+              <div class="blog-thumb__label">More leads</div>
+            </div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-cat">Google Reviews</span><span class="blog-sep">·</span><span class="blog-date">April 2026</span><span class="blog-sep">·</span><span class="blog-read">7 min read</span></div>
+            <h2 class="blog-title">How to Go from 20 to 200 Google Reviews in 12 Months Without Asking Customers Awkwardly</h2>
+            <p class="blog-excerpt">The businesses dominating local search in Ontario didn't get 200+ reviews by asking in person or hoping customers would leave one. They have a system. This is how it works and how to build one without spending more than $300/month.</p>
+            <a href="blog/google-reviews-20-to-200.html" class="blog-link">Read the full guide <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          </div>
+        </article>
+
+        <!-- COMING SOON PLACEHOLDERS -->
+        <div class="blog-soon rv d1">
+          <div class="blog-soon__label">Coming Soon</div>
+          <div class="blog-soon__title">Wix vs. Custom-Coded: Why the Price Difference Is a False Economy for Trades Businesses</div>
+        </div>
+
+        <div class="blog-soon rv d2">
+          <div class="blog-soon__label">Coming Soon</div>
+          <div class="blog-soon__title">The Ontario Contractor's Guide to Local SEO: Service Area Pages That Actually Rank</div>
+        </div>
+
+        <div class="blog-soon rv d3">
+          <div class="blog-soon__label">Coming Soon</div>
+          <div class="blog-soon__title">How a Dental Practice in Mississauga Added 40 New Patient Inquiries per Month With One Landing Page Change</div>
+        </div>
+
+      </div>
+
+      <!-- Newsletter -->
+      <div class="newsletter rv">
+        <div>
+          <div class="newsletter__title">New posts, straight to you.</div>
+          <p class="newsletter__body">Practical guides for Ontario business owners — no fluff, no spam. One email when a new post goes live. Unsubscribe any time.</p>
+        </div>
+        <div class="nl-form">
+          <div class="nl-field">
+            <label class="nl-label" for="nl-email">Email address</label>
+            <input class="nl-input" id="nl-email" type="email" name="email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+          <button class="nl-btn" type="button">Subscribe →</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-sec" id="cta">
+    <div class="wrap" style="position:relative;z-index:1;">
+      <h2 class="cta-sec__h rv">Ready to stop reading<br>and <span  style="color:var(--acc)">start getting calls?</span></h2>
+      <p class="cta-sec__p rv d1">Book a free 30-minute call. We'll look at your current online presence and tell you exactly what we'd change.</p>
+      <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-solid btn-solid--lg rv d2">Book a Free Call →</a>
+      <p class="cta-sec__fine rv d3">No pitch deck &nbsp;·&nbsp; No pressure &nbsp;·&nbsp; No obligation</p>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" style="display:inline-flex;margin-bottom:14px;"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="footer__logo-img" width="180" height="40" /></a>
+        <p class="footer__tagline">Custom built websites and AI automation for Ontario trades and service businesses. More calls. More jobs. Guaranteed.</p>
+      </div>
+      <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="web-design.html">Web Design</a></li><li><a href="ai-automation.html">AI Automation</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener">Book a Call</a></li><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Craigmillar Studio. Built in Toronto, Canada.</p>
+      <span class="footer__badge">Serving Ontario</span>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

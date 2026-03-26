@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Automation — Craigmillar Studio</title>
+  <meta name="description" content="AI automation systems for Ontario trades and service businesses. Missed call text-back, AI chat, Google review automation, quote follow-up. Running 24/7." />
+  <link rel="canonical" href="https://craigmillarstudio.ca/ai-automation.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://craigmillarstudio.ca/ai-automation.html" />
+  <meta property="og:title" content="AI Automation — Craigmillar Studio" />
+  <meta property="og:description" content="AI automation systems for Ontario trades and service businesses." />
+  <meta property="og:image" content="https://craigmillarstudio.ca/assets/images/hero-bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://craigmillarstudio.ca/assets/images/hero-bg.jpg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"AI Automation","url":"https://craigmillarstudio.ca/ai-automation.html","isPartOf":{"@id":"https://craigmillarstudio.ca/#website"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── AI AUTOMATION PAGE STYLES ── */
+
+    /* Plain English explainer */
+    .explainer { background: var(--bg1); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 56px 48px; }
+    .explainer__inner { max-width: var(--max); margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .exp__label { font-size: 10.5px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--acc); margin-bottom: 14px; }
+    .exp__h { font-family: var(--fd); font-size: clamp(26px, 2.8vw, 36px); font-weight: 800; letter-spacing: -1px; color: var(--t0); line-height: 1.05; margin-bottom: 18px; }
+    .exp__body { font-size: 15px; color: var(--t1); line-height: 1.75; }
+    .exp-items { display: flex; flex-direction: column; gap: 12px; }
+    .exp-item { display: flex; align-items: flex-start; gap: 14px; background: var(--bg2); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; transition: border-color 0.25s; }
+    .exp-item:hover { border-color: var(--line2); }
+    .exp-item__icon { width: 34px; height: 34px; background: var(--adim); border: 1px solid var(--aring); border-radius: 7px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .exp-item__title { font-size: 13px; font-weight: 700; color: var(--t0); margin-bottom: 3px; }
+    .exp-item__body { font-size: 12px; color: var(--t1); line-height: 1.55; }
+
+    /* Service blocks */
+    .service-block { margin-bottom: 68px; padding-bottom: 68px; border-bottom: 1px solid var(--line); }
+    .service-block:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .svc__header { display: grid; grid-template-columns: auto 1fr auto; align-items: start; gap: 24px; margin-bottom: 32px; }
+    .svc__badge { font-family: var(--fd); font-size: 11px; font-weight: 800; letter-spacing: 2px; color: var(--acc); background: var(--adim); border: 1px solid var(--aring); border-radius: 6px; padding: 6px 14px; white-space: nowrap; align-self: center; }
+    .svc__title { font-family: var(--fd); font-size: clamp(24px, 3vw, 36px); font-weight: 800; letter-spacing: -1px; color: var(--t0); margin-bottom: 4px; }
+    .svc__tagline { font-size: 15px; color: var(--t1); }
+
+    /* Problem card */
+    .problem-card { background: var(--red-bg); border: 1px solid var(--red-line); border-left: 3px solid var(--red-text); border-radius: 10px; padding: 18px 22px; margin-bottom: 28px; display: flex; gap: 14px; align-items: flex-start; }
+    .problem-card__label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red-text); margin-bottom: 6px; }
+    .problem-card__text { font-size: 14px; color: rgba(238,242,248,0.82); line-height: 1.65; }
+
+    /* Feature grid */
+    .feat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+    .feat-card { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 20px 18px; transition: border-color 0.25s, transform 0.2s; }
+    .feat-card:hover { border-color: var(--line2); transform: translateY(-2px); }
+    .feat-card__icon { width: 36px; height: 36px; background: var(--adim); border: 1px solid var(--aring); border-radius: 7px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+    .feat-card__title { font-size: 13.5px; font-weight: 700; color: var(--t0); margin-bottom: 6px; }
+    .feat-card__body { font-size: 12.5px; color: var(--t1); line-height: 1.6; }
+
+    /* Compound box */
+    .compound-box { background: var(--bg2); border: 1px solid var(--line); border-left: 3px solid var(--acc); border-radius: 12px; padding: 22px 26px; margin: 24px 0; }
+    .compound-box__label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--acc); margin-bottom: 8px; }
+    .compound-box__text { font-size: 14px; color: var(--t1); line-height: 1.7; }
+
+    /* Service CTA row */
+    .svc-cta-row { display: flex; align-items: center; gap: 14px; margin-top: 24px; flex-wrap: wrap; }
+
+    /* Bundle box */
+    .bundle-box { background: var(--bg2); border: 1px solid var(--acc); border-radius: 16px; padding: 36px 40px; display: flex; align-items: flex-start; gap: 28px; margin-top: 52px; }
+    .bundle-box__icon { width: 52px; height: 52px; background: var(--adim); border: 1px solid var(--aring); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .bundle-box__title { font-family: var(--fd); font-size: 20px; font-weight: 800; color: var(--t0); letter-spacing: -0.5px; margin-bottom: 8px; }
+    .bundle-box__body { font-size: 14px; color: var(--t1); line-height: 1.7; max-width: 640px; }
+
+    /* Pricing summary */
+    .pricing-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 52px; }
+    .price-card { background: var(--bg2); border: 1px solid var(--line); border-radius: 14px; padding: 30px 28px; position: relative; transition: border-color 0.3s, transform 0.3s; }
+    .price-card:hover { border-color: var(--line2); transform: translateY(-3px); }
+    .price-card--featured { border-color: var(--acc); }
+    .price-card--featured:hover { border-color: var(--acc); }
+    .price-card__badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--acc); color: var(--adk); font-size: 9px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; white-space: nowrap; }
+    .price-card__tier { font-family: var(--fd); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t2); margin-bottom: 6px; }
+    .price-card__service { font-family: var(--fd); font-size: 16px; font-weight: 700; color: var(--t0); margin-bottom: 14px; letter-spacing: -0.3px; }
+    .price-card__setup { font-family: var(--fd); font-size: 28px; font-weight: 800; color: var(--t0); letter-spacing: -1px; margin-bottom: 2px; }
+    .price-card__monthly { font-size: 13px; color: var(--acc); font-weight: 600; margin-bottom: 18px; }
+    .price-card__includes { font-size: 10.5px; color: var(--t2); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
+    .price-card__feats { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+    .price-card__feat { display: flex; align-items: flex-start; gap: 8px; font-size: 12.5px; color: var(--t1); line-height: 1.5; }
+    .price-card__feat-check { width: 13px; height: 13px; flex-shrink: 0; margin-top: 1px; color: var(--acc); }
+    .btn-price { display: block; width: 100%; padding: 12px; border-radius: 8px; font-size: 14px; font-weight: 700; font-family: var(--fb); text-align: center; cursor: pointer; transition: box-shadow 0.25s, transform 0.15s, background 0.2s, border-color 0.2s; }
+    .btn-price--solid { background: var(--acc); color: var(--adk); border: 1px solid transparent; }
+    .btn-price--solid:hover { box-shadow: 0 0 22px var(--aglow); transform: translateY(-1px); }
+    .btn-price--outline { background: transparent; color: var(--t0); border: 1px solid var(--line2); }
+    .btn-price--outline:hover { border-color: var(--t1); background: var(--bg4); }
+
+    @media (max-width: 1024px) {
+      .explainer__inner { grid-template-columns: 1fr; }
+      .svc__header { grid-template-columns: 1fr; gap: 14px; }
+      .feat-grid { grid-template-columns: 1fr; }
+      .pricing-row { grid-template-columns: 1fr; max-width: 460px; margin-left: auto; margin-right: auto; }
+      .bundle-box { flex-direction: column; gap: 18px; }
+    }
+    @media (max-width: 768px) {
+      .explainer { padding: 44px 22px; }
+      .svc-cta-row { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav__logo"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="nav__logo-img" width="200" height="44" /></a>
+    <ul class="nav__links">
+      <li><a href="web-design.html">Web Design</a></li>
+      <li><a href="ai-automation.html" class="active">AI Automation</a></li>
+      <li><a href="our-work.html">Our Work</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer" class="nav__cta">Book a Call →</a>
+    <button class="nav__ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile" id="mob">
+    <a href="index.html">Home</a>
+    <a href="web-design.html">Web Design</a>
+    <a href="ai-automation.html">AI Automation</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer">Book a Free Call →</a>
+  </div>
+
+  <main id="main">
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="breadcrumb rv"><a href="index.html">Home</a><span class="breadcrumb__sep">/</span><span class="breadcrumb__cur">AI Automation</span></div>
+      <span class="page-eyebrow rv">AI Automation — Ontario</span>
+      <h1 class="page-h1 rv d1">Your phone should be<br>ringing <em>right now.</em></h1>
+      <p class="page-lead rv d2" style="margin-bottom:40px;">Every hour without automation, you're losing leads. Missed calls go unanswered. Forms sit in inboxes. Quotes expire. We build systems that fix all of it — set up once, running forever.</p>
+      <div class="pills rv d3">
+        <div class="pill"><div class="pill__dot"></div>Runs 24/7</div>
+        <div class="pill"><div class="pill__dot"></div>Set Up Once</div>
+        <div class="pill"><div class="pill__dot"></div>No Contracts</div>
+        <div class="pill"><div class="pill__dot"></div>Live in 5–7 Days</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAIN ENGLISH EXPLAINER -->
+  <div class="explainer">
+    <div class="explainer__inner">
+      <div>
+        <div class="exp__label rv">Plain English</div>
+        <h2 class="exp__h rv d1">What is AI automation, exactly?</h2>
+        <p class="exp__body rv d2">It's software that does repetitive jobs automatically — without you lifting a finger. When someone calls and you don't answer, it texts them back in 60 seconds. When you finish a job, it sends a Google review request automatically. When someone fills out your form at 11pm, it replies immediately.<br><br>You set it up once. Then it runs forever. No staff. No checking. No chasing.</p>
+      </div>
+      <div class="exp-items rv d2">
+        <div class="exp-item">
+          <div class="exp-item__icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.21 3.41 2 2 0 0 1 3.22 1.22h3a2 2 0 0 1 2 1.72c.09.88.26 1.76.5 2.62a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.36-1.36a2 2 0 0 1 2.11-.45c.86.24 1.74.41 2.62.5A2 2 0 0 1 22 15.91z"/></svg></div>
+          <div><div class="exp-item__title">Missed call → instant text-back</div><div class="exp-item__body">The second a call goes to voicemail, the customer gets a personalised text within 60 seconds. Most leads book from this text alone.</div></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-item__icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div><div class="exp-item__title">Finished job → review request sent</div><div class="exp-item__body">2–4 hours after every completed job, your customer gets a direct link to leave a Google review. Sent when satisfaction is highest.</div></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-item__icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div><div class="exp-item__title">Website chat → 24/7 lead capture</div><div class="exp-item__body">An AI agent on your site answers questions, qualifies leads, and books estimates into your calendar. Works at 2am on a Sunday.</div></div>
+        </div>
+        <div class="exp-item">
+          <div class="exp-item__icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div><div class="exp-item__title">Sent quote → automatic follow-up</div><div class="exp-item__body">Every unsent quote gets followed up at day 2, day 5, and day 10. Conversion rates go up just from following up consistently.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THREE SERVICES -->
+  <section class="sec" id="services">
+    <div class="wrap">
+      <span class="eyebrow rv">Three Services</span>
+      <h2 class="sh rv d1">Pick one. Stack them all.<br>Cancel any time.</h2>
+      <p class="sp rv d2">Each service solves a specific problem. Most clients start with Service 01 and add Service 02 within 90 days once they see results.</p>
+
+      <!-- SERVICE 01 -->
+      <div class="service-block rv">
+        <div class="svc__header">
+          <div class="svc__badge">Service 01</div>
+          <div><h3 class="svc__title">Lead Conversion System</h3><p class="svc__tagline">Capture every lead. Recover every missed call. Never lose a job to voicemail again.</p></div><div class="svc__price-monthly">+ $497 / month</div></div>
+        </div>
+        <div class="problem-card">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8080" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div><div class="problem-card__label">The Problem This Solves</div><div class="problem-card__text">You miss a call. The customer calls the next plumber. You never knew they called. That job — worth $400–$900 — is gone forever. At $600 average per job, one missed call per day is $180,000 a year walking out the door.</div></div>
+        </div>
+        <div class="feat-grid">
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="feat-card__title">AI Chat Agent on Your Website</div><div class="feat-card__body">Trained on your services, service areas, FAQs, and pricing. Answers questions, qualifies leads, and books estimates directly into your calendar — at 2am on a Sunday if needed.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.21 3.41 2 2 0 0 1 3.22 1.22h3a2 2 0 0 1 2 1.72c.09.88.26 1.76.5 2.62a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.36-1.36a2 2 0 0 1 2.11-.45c.86.24 1.74.41 2.62.5A2 2 0 0 1 22 15.91z"/></svg></div><div class="feat-card__title">Missed Call Text-Back</div><div class="feat-card__body">The second a call goes to voicemail, the customer gets a personalised text from your business number within 60 seconds. Most leads book directly from this text.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="feat-card__title">Contact Form Auto-Responder</div><div class="feat-card__body">Every form submission gets an immediate reply with a confirmation and clear next step. No lead sits waiting 6 hours while your competitor replies in 2 minutes and books the job.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></div><div class="feat-card__title">Instant Lead SMS to You</div><div class="feat-card__body">The moment a new lead arrives through any channel, you get a text on your phone. You always know in real time. No checking three different dashboards.</div></div>
+        </div>
+        <div class="svc-cta-row"><a href="#cta" class="btn-primary">Get This Service →</a><a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer" class="btn-secondary">Book a Discovery Call</a></div>
+      </div>
+
+      <!-- SERVICE 02 -->
+      <div class="service-block rv">
+        <div class="svc__header">
+          <div class="svc__badge">Service 02</div>
+          <div><h3 class="svc__title">Review &amp; Reactivation Engine</h3><p class="svc__tagline">More Google reviews. Higher local search ranking. Lapsed customers brought back automatically.</p></div><div class="svc__price-monthly">+ $297 / month</div></div>
+        </div>
+        <div class="problem-card">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8080" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div><div class="problem-card__label">The Problem This Solves</div><div class="problem-card__text">You do great work. Your customers are happy. But you have 18 Google reviews and your competitor has 200. They rank higher on Google. They get the call. You don't. The only difference is they have a system to ask for reviews.</div></div>
+        </div>
+        <div class="feat-grid">
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="feat-card__title">Automatic Google Review Requests</div><div class="feat-card__body">2–4 hours after every completed job, your customer gets a text with a direct link to leave a Google review. Sent when satisfaction is highest, before they forget.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><div class="feat-card__title">Lapsed Customer Reactivation</div><div class="feat-card__body">Any customer who hasn't booked in 6–12 months gets a personalised outreach with a seasonal or returning-customer offer. Revenue brought back automatically.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="feat-card__title">Review Response Drafting</div><div class="feat-card__body">AI writes a professional, specific response to every new Google review. You tap approve and it posts — or set it to auto-post entirely. You never ignore a review again.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><div class="feat-card__title">Review Volume Tracking</div><div class="feat-card__body">Monthly report showing your review count growth, average rating trend, and response rate. You see exactly how the system is compounding your local search authority.</div></div>
+        </div>
+        <div class="compound-box"><div class="compound-box__label">The Compounding Effect</div><div class="compound-box__text">A moving company going from 20 to 200 Google reviews in 12 months doesn't just get more calls — they rank above every competitor who hasn't done the same thing. That ranking gap takes competitors a full year to close. Every month without this system, you're falling further behind businesses that have it.</div></div>
+        <div class="svc-cta-row"><a href="#cta" class="btn-primary">Get This Service →</a><a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer" class="btn-secondary">Book a Discovery Call</a></div>
+      </div>
+
+      <!-- SERVICE 03 -->
+      <div class="service-block rv">
+        <div class="svc__header">
+          <div class="svc__badge">Service 03</div>
+          <div><h3 class="svc__title">AI Business Assistant</h3><p class="svc__tagline">A 24/7 assistant that handles calls, follows up on quotes, and creates social content from your job photos.</p></div><div class="svc__price-monthly">+ $597 / month</div></div>
+        </div>
+        <div class="problem-card">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8080" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div><div class="problem-card__label">The Problem This Solves</div><div class="problem-card__text">You sent three quotes last week. None of them followed up. That's $3,000–$6,000 in potential revenue sitting in someone's inbox — and they've already hired someone else because that person followed up. Meanwhile your voicemail is full and your Instagram hasn't posted in four months.</div></div>
+        </div>
+        <div class="feat-grid">
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.21 3.41 2 2 0 0 1 3.22 1.22h3a2 2 0 0 1 2 1.72c.09.88.26 1.76.5 2.62a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.08 6.08l1.36-1.36a2 2 0 0 1 2.11-.45c.86.24 1.74.41 2.62.5A2 2 0 0 1 22 15.91z"/></svg></div><div class="feat-card__title">AI Voice Agent for Missed Calls</div><div class="feat-card__body">Answers in your business name, takes a message in natural conversation, and sends you an SMS summary. Available 24/7. Never on hold, never off sick, never forgets to notify you.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div class="feat-card__title">Quote Follow-Up Sequences</div><div class="feat-card__body">Every sent quote gets automatically followed up at day 2, day 5, and day 10. Most clients see a 20–40% improvement in quote conversion just from following up consistently.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></div><div class="feat-card__title">Social Content from Job Photos</div><div class="feat-card__body">You send a photo of a finished job. AI writes the caption and posts it to your Google Business Profile and Instagram. Consistent social presence without the time investment.</div></div>
+          <div class="feat-card"><div class="feat-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="feat-card__title">Review Response + Auto-Posting</div><div class="feat-card__body">Everything from Service 02 is included. You don't need to buy Service 02 separately when you choose the AI Business Assistant.</div></div>
+        </div>
+        <div class="svc-cta-row"><a href="#cta" class="btn-primary">Get This Service →</a><a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer" class="btn-secondary">Book a Discovery Call</a></div>
+      </div>
+
+      <!-- BUNDLE -->
+      <div class="bundle-box rv">
+        <div class="bundle-box__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+        <div>
+          <div class="bundle-box__title">Want all three? We'll tell you what actually makes sense.</div>
+          <div class="bundle-box__body">Most clients start with the Lead Conversion System and add the Review Engine within 90 days once they see results. On the discovery call, we'll map your specific gaps and recommend only what your business needs. No contracts. Cancel any service with 30 days notice.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED -->
+  <section class="sec sec-alt" id="get-started">
+    <div class="wrap">
+      <span class="eyebrow rv">Get Started</span>
+      <h2 class="sh rv d1" style="max-width:520px;">Pricing is set on your discovery call.</h2>
+      <p class="sp rv d2">Every setup is different. On your call, we look at your business, decide which automations make sense, and give you a clear cost before anything gets built. Most clients are live within a week of signing.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;" class="rv d2">
+        <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-primary btn-primary--lg">Book a Free Call →</a>
+      </div>
+      <p class="rv d3" style="margin-top:14px;font-size:11px;color:var(--t2);letter-spacing:2px;text-transform:uppercase;">No pitch deck &nbsp;·&nbsp; No pressure &nbsp;·&nbsp; No obligation</p>
+    </div>
+  </section>
+
+    <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <span class="eyebrow rv">FAQ</span>
+      <h2 class="sh rv d1" style="max-width:480px;margin-bottom:0;">What people ask before booking.</h2>
+      <div class="faq-list rv d1">
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Do I need to understand any of this technology to use it?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">No. We build it, configure it, test it, and explain it. You just see the results — missed call texts going out, reviews coming in, leads being captured. It's designed to run without you looking at it.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">How long does setup take?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Most systems are live within 5–7 business days of your onboarding call. We need access to your phone number, website, and Google Business Profile — that's it. We handle everything else.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Can I cancel? Are there contracts?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">No contracts. Cancel any service with 30 days notice. We keep the monthly affordable because we want you to stay because the system is working — not because you're locked in.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Does my website need to be built by you to use these services?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">No. The AI chat agent can be embedded into any existing website. The missed call text-back and review automation work at the phone and Google Business Profile level — they don't require us to touch your site at all.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">What kind of businesses do you work with?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Ontario trades and service businesses primarily — HVAC, plumbing, electrical, contractors, junk removal, moving companies, cleaning companies. We also work with professional services firms like dental practices, law firms, and mortgage brokers.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-sec" id="cta">
+    <div class="wrap" style="position:relative;z-index:1;">
+      <h2 class="cta-sec__h rv">Stop losing jobs to<br><span  style="color:var(--acc)">your voicemail.</span></h2>
+      <p class="cta-sec__p rv d1">Book a free 30-minute call. We'll show you exactly how many leads you're currently losing and what it would take to capture them.</p>
+      <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-solid btn-solid--lg rv d2">Book a Free Call →</a>
+      <p class="cta-sec__fine rv d3">No pitch deck &nbsp;·&nbsp; No pressure &nbsp;·&nbsp; No obligation</p>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <a href="index.html" style="display:inline-flex;margin-bottom:14px;"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="footer__logo-img" width="180" height="40" /></a>
+        <p class="footer__tagline">Custom built websites and AI automation for Ontario trades and service businesses. More calls. More jobs. Guaranteed.</p>
+      </div>
+      <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="web-design.html">Web Design</a></li><li><a href="ai-automation.html">AI Automation</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener">Book a Call</a></li><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Craigmillar Studio. Built in Toronto, Canada.</p>
+      <span class="footer__badge">Serving Ontario</span>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

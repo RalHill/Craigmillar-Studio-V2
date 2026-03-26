@@ -37,8 +37,8 @@ s = s.replace(
 );
 
 s = s.replace(
-  /<a href="index.html" style="display:inline-flex;margin-bottom:14px;"><img src="data:image[^"]*"[^>]*><\/a>/,
-  '<a href="index.html" style="display:inline-flex;margin-bottom:14px;"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="footer__logo-img" width="180" height="40" /></a>'
+  /<a href="/" style="display:inline-flex;margin-bottom:14px;"><img src="data:image[^"]*"[^>]*><\/a>/,
+  '<a href="/" style="display:inline-flex;margin-bottom:14px;"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="footer__logo-img" width="180" height="40" /></a>'
 );
 
 fs.writeFileSync(indexPath, s);

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B0F1A" />
+  <meta name="msapplication-TileColor" content="#0B0F1A" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/assets/favicons/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <title>SEO Services — Craigmillar Studio</title>
+  <meta name="description" content="Search engine optimization for Ontario trades and service businesses. Rank first on Google for local keywords. Complete SEO strategy paired with web design and AI automation." />
+  <link rel="canonical" href="https://craigmillar.com/seo.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://craigmillar.com/seo.html" />
+  <meta property="og:title" content="SEO Services — Craigmillar Studio" />
+  <meta property="og:description" content="Rank first on Google. Complete SEO strategy for Ontario trades — keyword research, content creation, technical optimization." />
+  <meta property="og:image" content="https://craigmillar.com/assets/images/hero-bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SEO Services — Craigmillar Studio" />
+  <meta name="twitter:image" content="https://craigmillar.com/assets/images/hero-bg.jpg" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebPage","name":"SEO Services","url":"https://craigmillar.com/seo.html","isPartOf":{"@id":"https://craigmillar.com/#website"}}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── SEO PAGE STYLES ── */
+
+    /* Tiers */
+    .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 56px; align-items: start; }
+    .tier { background: var(--bg2); border: 1px solid var(--line); border-radius: 16px; padding: 36px 32px; position: relative; transition: border-color 0.3s, transform 0.3s, background 0.3s; }
+    .tier:hover { border-color: var(--line2); transform: translateY(-4px); background: var(--bg3); }
+    .tier--featured { border-color: var(--acc); }
+    .tier--featured:hover { border-color: var(--acc); }
+    .tier__badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--acc); color: var(--adk); font-size: 10px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 16px; border-radius: 100px; white-space: nowrap; }
+    .tier__name { font-family: var(--fd); font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--t2); margin-bottom: 10px; }
+    .tier__price { font-family: var(--fd); font-size: clamp(24px, 3vw, 32px); font-weight: 800; letter-spacing: -2px; color: var(--t0); line-height: 1; margin-bottom: 6px; }
+    .tier__price span { font-size: 14px; font-weight: 500; letter-spacing: 0; color: var(--t1); }
+    .tier__desc { font-size: 13px; color: var(--t1); line-height: 1.6; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--line); }
+    .tier__for { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t2); margin-bottom: 8px; }
+    .tier__ideal { font-size: 13px; color: var(--t1); line-height: 1.6; margin-bottom: 20px; }
+    .tier__timeline { display: inline-flex; align-items: center; gap: 6px; background: var(--adim); border: 1px solid var(--aring); border-radius: 6px; padding: 5px 12px; font-size: 11px; font-weight: 600; color: var(--acc); margin-bottom: 24px; }
+    .feat-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .feat { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--t1); line-height: 1.5; }
+    .feat__check { width: 15px; height: 15px; flex-shrink: 0; margin-top: 1px; color: var(--acc); }
+    .btn-tier { display: block; width: 100%; padding: 13px; border-radius: 8px; font-size: 14px; font-weight: 700; font-family: var(--fb); text-align: center; transition: box-shadow 0.25s, transform 0.15s, background 0.2s, border-color 0.2s; cursor: pointer; }
+    .btn-tier--solid { background: var(--acc); color: var(--adk); border: 1px solid transparent; }
+    .btn-tier--solid:hover { box-shadow: 0 0 28px var(--aglow); transform: translateY(-1px); }
+    .btn-tier--outline { background: transparent; color: var(--t0); border: 1px solid var(--line2); }
+    .btn-tier--outline:hover { border-color: var(--t1); background: var(--bg4); }
+
+    /* Stack callout */
+    .stack-box { background: var(--bg2); border: 1px solid var(--line); border-left: 3px solid var(--acc); border-radius: 12px; padding: 28px 32px; margin-top: 36px; display: flex; align-items: flex-start; gap: 20px; }
+    .stack-box__icon { flex-shrink: 0; width: 40px; height: 40px; background: var(--adim); border: 1px solid var(--aring); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .stack-box__title { font-family: var(--fd); font-size: 15px; font-weight: 700; color: var(--t0); margin-bottom: 6px; }
+    .stack-box__body { font-size: 13.5px; color: var(--t1); line-height: 1.7; }
+
+    /* Add-ons */
+    .addons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 52px; }
+    .addon { background: var(--bg2); border: 1px solid var(--line); border-radius: 12px; padding: 24px 22px; transition: border-color 0.25s, transform 0.2s; }
+    .addon:hover { border-color: var(--line2); transform: translateY(-2px); }
+    .addon__name { font-size: 14px; font-weight: 600; color: var(--t0); margin-bottom: 6px; }
+    .addon__desc { font-size: 12px; color: var(--t1); line-height: 1.6; }
+
+    /* Comparison table */
+    .comp-wrap { overflow-x: auto; margin-top: 52px; border-radius: 14px; border: 1px solid var(--line); }
+    .comp-table { width: 100%; border-collapse: collapse; min-width: 580px; }
+    .comp-table th { padding: 16px 18px; font-family: var(--fd); font-size: 11.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--t2); background: var(--bg2); text-align: left; border-bottom: 1px solid var(--line); }
+    .comp-table th:not(:first-child) { text-align: center; }
+    .comp-table th.fc { color: var(--acc); }
+    .comp-table td { padding: 13px 18px; font-size: 13px; color: var(--t1); border-bottom: 1px solid var(--line); background: var(--bg2); }
+    .comp-table td:not(:first-child) { text-align: center; }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table tr:hover td { background: var(--bg3); }
+    .comp-table td.fc { color: var(--t0); }
+    .comp-table .row-lbl { font-weight: 500; color: var(--t0); }
+    .ck { color: var(--acc); font-weight: 700; }
+    .cx { color: var(--t2); }
+
+    /* 4-step process */
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 52px; position: relative; }
+    .process-steps::before { content: ''; position: absolute; top: 23px; left: calc(12.5% + 12px); right: calc(12.5% + 12px); height: 1px; background: linear-gradient(90deg, var(--line), var(--acc), var(--acc), var(--line)); }
+    .ps { text-align: center; }
+    .ps__num { width: 48px; height: 48px; border-radius: 50%; background: var(--bg2); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; position: relative; z-index: 1; transition: border-color 0.25s, background 0.25s; }
+    .ps:hover .ps__num { border-color: var(--acc); background: var(--bg3); }
+    .ps__num span { font-family: var(--fd); font-size: 15px; font-weight: 800; color: var(--acc); }
+    .ps__title { font-family: var(--fd); font-size: 15px; font-weight: 700; color: var(--t0); margin-bottom: 8px; }
+    .ps__body { font-size: 12.5px; color: var(--t1); line-height: 1.65; }
+
+    @media (max-width: 1024px) {
+      .tiers { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+      .tier--featured { order: -1; }
+      .addons { grid-template-columns: 1fr 1fr; }
+      .process-steps { grid-template-columns: 1fr 1fr; }
+      .process-steps::before { display: none; }
+      .stack-box { flex-direction: column; gap: 14px; }
+    }
+    @media (max-width: 768px) {
+      .addons, .process-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <nav class="nav" id="nav">
+    <a href="/" class="nav__logo"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="nav__logo-img" width="200" height="44" /></a>
+    <ul class="nav__links">
+      <li><a href="web-design.html">Web Design</a></li>
+      <li><a href="ai-automation.html">AI Automation</a></li>
+      <li><a href="seo.html" class="active">SEO</a></li>
+      <li><a href="our-work.html">Our Work</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer" class="nav__cta">Book a Call →</a>
+    <button class="nav__ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="nav__mobile" id="mob">
+    <a href="/">Home</a>
+    <a href="web-design.html">Web Design</a>
+    <a href="ai-automation.html">AI Automation</a>
+    <a href="seo.html">SEO</a>
+    <a href="our-work.html">Our Work</a>
+    <a href="blog.html">Blog</a>
+    <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener noreferrer">Book a Free Call →</a>
+  </div>
+
+  <main id="main">
+  <div class="page-hero">
+    <div class="page-hero__inner">
+      <div class="breadcrumb rv"><a href="/">Home</a><span class="breadcrumb__sep">/</span><span class="breadcrumb__cur">SEO</span></div>
+      <span class="page-eyebrow rv">SEO — Ontario</span>
+      <h1 class="page-h1 rv d1">Rank first on Google.<br><em>Stop losing calls</em><br>to your competitors.</h1>
+      <p class="page-lead rv d2" style="margin-bottom:40px;">Strategic SEO that compounds. Every month your ranking gets stronger, your authority grows, and more qualified leads call you from Google. For Ontario trades and service businesses. No ads. No contracts. Predictable monthly growth.</p>
+      <div class="pills rv d3">
+        <div class="pill"><div class="pill__dot"></div>Local Keywords</div>
+        <div class="pill"><div class="pill__dot"></div>First-Page Rankings</div>
+        <div class="pill"><div class="pill__dot"></div>Organic Traffic</div>
+        <div class="pill"><div class="pill__dot"></div>Content Authority</div>
+        <div class="pill"><div class="pill__dot"></div>Measurable ROI</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust-bar">
+    <div class="trust-bar__inner">
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">Guaranteed first-page visibility</span></div>
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">3–6 month timeline to results</span></div>
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">Monthly keyword ranking tracking</span></div>
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">No lock-in contracts. Cancel anytime.</span></div>
+      <div class="trust-item"><svg class="trust-item__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg><span class="trust-item__text">Organic traffic compounds over time.</span></div>
+    </div>
+  </div>
+
+  <!-- WHY SEO -->
+  <section class="sec" id="why-seo">
+    <div class="wrap">
+      <span class="eyebrow rv">Why SEO Matters</span>
+      <h2 class="sh rv d1" style="max-width:520px;">Your Google Ranking is Costing You Right Now</h2>
+      <p class="sp rv d2">Every week you don't rank on Google, revenue walks to a competitor who did. For trades and service businesses, ranking first for local keywords is the difference between feast and famine.</p>
+      <div class="stat-row">
+        <div class="stat-cell rv d1"><div class="stat-cell__num">76%</div><div class="stat-cell__label">First page = 85% of clicks</div><p class="stat-cell__desc">Rank 11th? You're invisible. Every position on page two is another competitor getting your leads.</p></div>
+        <div class="stat-cell rv d2"><div class="stat-cell__num">$40K–$120K</div><div class="stat-cell__label">Annual revenue from organic</div><p class="stat-cell__desc">For local trades, the difference between ranking #1 and #5 is 3x more leads. That's $40K–$120K per year.</p></div>
+        <div class="stat-cell rv d3"><div class="stat-cell__num">92%</div><div class="stat-cell__label">Research before calling</div><p class="stat-cell__desc">Customers Google you first. A slow or unoptimized site sends them to your competitor's website.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERS SECTION -->
+  <section class="sec sec-alt" id="tiers">
+    <div class="wrap">
+      <span class="eyebrow rv">SEO Packages</span>
+      <h2 class="sh rv d1">Choose your ranking strategy.</h2>
+      <p class="sp rv d2">No pricing listed — each tier is customized to your goals. Book a call to discuss which tier fits your business.</p>
+      <div class="tiers">
+        <!-- STARTER TIER -->
+        <div class="tier rv d1">
+          <div class="tier__name">Starter</div>
+          <div class="tier__desc">Foundation building. Get ranked.</div>
+          <div class="tier__for">Best for</div>
+          <div class="tier__ideal">New sites, local service businesses, first-time SEO. Build the foundation to scale.</div>
+          <div class="feat-list">
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Technical SEO audit (one-time)</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>5 meta tag optimizations</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Local business schema setup</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Sitemap + robots.txt optimization</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Monthly analytics report</div>
+          </div>
+          <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-tier btn-tier--outline">Discuss Pricing →</a>
+        </div>
+
+        <!-- GROWTH TIER (Featured) -->
+        <div class="tier tier--featured rv d2">
+          <div class="tier__badge">Most Popular</div>
+          <div class="tier__name">Growth</div>
+          <div class="tier__desc">Consistent scaling. Dominate your market.</div>
+          <div class="tier__for">Best for</div>
+          <div class="tier__ideal">Established businesses, 15–30 leads/month targets, regional scaling. Content-driven SEO growth.</div>
+          <div class="feat-list">
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>All Starter services</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>2 blog posts/month (keyword-optimized)</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>On-page optimization (10 pages)</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Internal linking strategy</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Local SEO full setup</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Monthly performance report</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Quarterly strategy reviews</div>
+          </div>
+          <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-tier btn-tier--solid">Discuss Pricing →</a>
+        </div>
+
+        <!-- COMPREHENSIVE TIER -->
+        <div class="tier rv d3">
+          <div class="tier__name">Comprehensive</div>
+          <div class="tier__desc">Complete SEO + AI integration. Market leadership.</div>
+          <div class="tier__for">Best for</div>
+          <div class="tier__ideal">High-volume businesses, $250K+ revenue, national expansion, full digital domination goals.</div>
+          <div class="feat-list">
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>All Growth services</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>4 blog posts/month (2,000+ words)</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>AI SEO specialization</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Advanced schema + rich snippets</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Monthly competitor analysis</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Monthly strategy sessions</div>
+            <div class="feat"><svg class="feat__check" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="2,8 6,12 14,4"/></svg>Conversion optimization consultation</div>
+          </div>
+          <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-tier btn-tier--outline">Discuss Pricing →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="sec" id="compare">
+    <div class="wrap">
+      <span class="eyebrow rv">Compare</span>
+      <h2 class="sh rv d1">What's included in each tier.</h2>
+      <div class="comp-wrap rv d1">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th style="width:40%">Feature</th>
+              <th>Starter</th>
+              <th class="fc">Growth</th>
+              <th>Comprehensive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="row-lbl">Technical SEO audit</td><td>1x initial</td><td class="fc">Ongoing</td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Meta tag optimization</td><td>5 pages</td><td class="fc">10 pages</td><td>All pages + AI</td></tr>
+            <tr><td class="row-lbl">Blog content creation</td><td><span class="cx">—</span></td><td class="fc">2/month</td><td>4/month</td></tr>
+            <tr><td class="row-lbl">On-page optimization</td><td><span class="cx">—</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Internal linking strategy</td><td><span class="cx">—</span></td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span></td></tr>
+            <tr><td class="row-lbl">Local SEO setup</td><td>Schema only</td><td class="fc">Full setup</td><td>Full + expansion</td></tr>
+            <tr><td class="row-lbl">Analytics setup (GA4)</td><td>Basic</td><td class="fc"><span class="ck">✓</span></td><td><span class="ck">✓</span> + events</td></tr>
+            <tr><td class="row-lbl">Competitor analysis</td><td><span class="cx">—</span></td><td class="fc">Quarterly</td><td>Monthly</td></tr>
+            <tr><td class="row-lbl">AI SEO services</td><td><span class="cx">—</span></td><td class="fc"><span class="cx">—</span></td><td><span class="ck">✓</span> Full</td></tr>
+            <tr><td class="row-lbl">Monthly reporting</td><td><span class="ck">✓</span></td><td class="fc"><span class="ck">✓</span> +recs</td><td><span class="ck">✓</span> Call</td></tr>
+            <tr><td class="row-lbl">Strategy sessions</td><td><span class="cx">—</span></td><td class="fc">Quarterly</td><td>Monthly</td></tr>
+            <tr><td class="row-lbl">Ranking guarantee</td><td>First page</td><td class="fc">First page</td><td>First page</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEB DESIGN + SEO UPSELL -->
+  <section class="sec sec-alt" id="web-upsell">
+    <div class="wrap">
+      <div style="background:var(--bg2);border:1px solid var(--aring);border-left:3px solid var(--acc);border-radius:14px;padding:36px 40px;display:flex;align-items:flex-start;gap:24px;">
+        <div style="width:48px;height:48px;background:var(--adim);border:1px solid var(--aring);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8FF3E" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--acc);margin-bottom:8px;">Complete Your System</div>
+          <div style="font-family:var(--fd);font-size:20px;font-weight:800;color:var(--t0);letter-spacing:-0.5px;margin-bottom:10px;">SEO + Web Design = Double the Impact</div>
+          <p style="font-size:14px;color:var(--t1);line-height:1.75;max-width:640px;margin-bottom:18px;">SEO drives traffic. Web design converts it. Together, they're unstoppable. A beautiful, fast website ranks better on Google, and an optimized site converts more traffic into leads. Pair your SEO strategy with our custom web design.</p>
+          <a href="web-design.html" style="display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--acc);">See Web Design Services →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="sec sec-alt" id="process">
+    <div class="wrap">
+      <span class="eyebrow rv">How It Works</span>
+      <h2 class="sh rv d1">From audit to first page in 3–6 months.</h2>
+      <div class="process-steps">
+        <div class="ps rv d1"><div class="ps__num"><span>01</span></div><h3 class="ps__title">Audit &amp; Strategy</h3><p class="ps__body">Technical health assessment, competitor keyword benchmarking, custom roadmap for your market.</p></div>
+        <div class="ps rv d2"><div class="ps__num"><span>02</span></div><h3 class="ps__title">Foundation Build</h3><p class="ps__body">Technical fixes, meta optimization, internal linking, local business setup, schema markup.</p></div>
+        <div class="ps rv d3"><div class="ps__num"><span>03</span></div><h3 class="ps__title">Content Authority</h3><p class="ps__body">Monthly keyword-optimized blog content, service page rewrites, FAQ optimization for snippets.</p></div>
+        <div class="ps rv d4"><div class="ps__num"><span>04</span></div><h3 class="ps__title">Growth &amp; Monitor</h3><p class="ps__body">Ranking tracking, conversion analysis, strategy adjustments, competitive monitoring, ongoing optimization.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <span class="eyebrow rv">FAQ</span>
+      <h2 class="sh rv d1" style="max-width:480px;margin-bottom:0;">Questions we get asked every time.</h2>
+      <div class="faq-list rv d1">
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">How long does it take to rank on Google?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">3–6 months for competitive keywords. 2–4 weeks for low-competition local keywords. It depends on your market, existing ranking position, and competition level. We'll give you realistic timelines on your discovery call.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">What's the difference between SEO and Google Ads?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">SEO is organic (free clicks after ranking). Ads are paid per click. SEO compounds over time; Ads stop working when you stop paying. For trades, SEO + Ads together = fastest growth. SEO alone = sustainable long-term growth.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Can you guarantee first-page rankings?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">No legitimate SEO agency guarantees #1 rankings. We guarantee first-page visibility (top 10) for your target keywords or we don't charge you. That's our promise. Competitive markets take longer, but we have track records of overtaking entrenched competitors in 6–9 months.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">What if I stop doing SEO?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Rankings don't drop immediately, but you'll lose ground to competitors over 6–12 months. Think of SEO like fitness — you build strength over time, but you have to maintain it. The good news: organic rankings are stickier than ads. You'll stay ranked longer if you stop than if you stop running ads.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">How do you measure SEO results?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Keyword rankings, organic traffic growth, lead quality, conversion rate, and ROI on ad spend eliminated. We track all of it monthly and report transparently. You'll see organic traffic go up, rankings climb, and leads pour in — and we show you exactly how it happened.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Is SEO worth it for a small trades business?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Absolutely. Local trades see the fastest ROI — 12–18 months. One ranked keyword = recurring calls for years. Compare that to Ads (one click = one customer, then you pay again) or cold calling. SEO is the only channel that gets cheaper over time.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">Can I pair SEO with AI automation?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Yes. In fact, we recommend it. SEO drives traffic; AI automation answers calls and qualifies leads. Together they're a complete system. Web Design + SEO + AI = market domination. Many clients start with SEO, then add AI automation once leads are flowing.</div></div></div>
+        <div class="faq-item"><button type="button" class="faq-item__q" onclick="toggleFaq(this)"><span class="faq-item__q-text">What if my competitors already rank higher?</span><svg class="faq-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-item__a"><div class="faq-item__a-inner">Competitive markets take longer, but they're not impossible. We've helped trades businesses overtake entrenched competitors in 6–9 months. It requires strategy, consistency, and content authority. We have the process; you need the commitment.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-sec" id="cta">
+    <div class="wrap" style="position:relative;z-index:1;">
+      <h2 class="cta-sec__h rv">Your competitors are<br>ranking above you. <span  style="color:var(--acc);">We fix that.</span></h2>
+      <p class="cta-sec__p rv d1">Book a free 30-minute SEO strategy call. We'll analyze your market, show you the keywords you should be ranking for, and tell you exactly what it takes to get first-page visibility.</p>
+      <a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener" class="btn-solid btn-solid--lg rv d2">Book a Free SEO Call →</a>
+      <p class="cta-sec__fine rv d3">No pitch deck &nbsp;·&nbsp; No pressure &nbsp;·&nbsp; No obligation</p>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <a href="/" style="display:inline-flex;margin-bottom:14px;"><img src="assets/images/logo-full.png" alt="Craigmillar Studio" class="footer__logo-img" width="180" height="40" /></a>
+        <p class="footer__tagline">Custom websites, AI automation, and SEO strategy for Ontario trades and service businesses. More calls. More jobs. Guaranteed.</p>
+      </div>
+      <div><p class="footer__col-title">Services</p><ul class="footer__links"><li><a href="web-design.html">Web Design</a></li><li><a href="ai-automation.html">AI Automation</a></li><li><a href="seo.html">SEO</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+      <div><p class="footer__col-title">Company</p><ul class="footer__links"><li><a href="https://calendly.com/hillraluc/30min" target="_blank" rel="noopener">Book a Call</a></li><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2026 Craigmillar Studio. Built in Toronto, Canada.</p>
+      <span class="footer__badge">Serving Ontario</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
